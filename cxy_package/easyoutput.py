@@ -51,6 +51,12 @@ def underline_obo(text,velocity): #下划线文字 text:输出内容 velocity:�
     end = '\033[0m'
     obo(underline + text + end,velocity)
 
+def strike(text):#删除线文字 text:内容 注：仅适用于英文
+    result = ''
+    for c in text:
+        result = result + c + '\u0336'
+    print(result)
+
 def bigword(text): #英文艺术字 text:英文内容
     # 仅支持输入英文
     name = text
